@@ -1,4 +1,5 @@
-# Self-Calibrating Vicinal Risk Minimisation for Model Calibration<br><sub><sub>Official Pytorch Implementation</sub></sub>
+# Self-Calibrating Vicinal Risk Minimisation for Model Calibration<br>
+<sub><sub>Interim Implementation (Will Be Updated Into Final Version)</sub></sub>
 [<a href="https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Self-Calibrating_Vicinal_Risk_Minimisation_for_Model_Calibration_CVPR_2024_paper.html" target="_blank">Paper</a>] [<a href="#bibtex">BibTex</a>]
 
 
@@ -19,6 +20,17 @@ Download the training dataset: <a target="_blank" href="https://www.kaggle.com/d
 ```
 python Dataset/Process_Texture_Dataset.py
 ```
+
+
+## Train, Test and Evaluate
+To train, test and evaluate the model consecutively, run the following line of code:
+```
+CUDA_VISIBLE_DEVICES=GOU_ID python main_SCVRM.py
+```
+
+
+## Pretrained Model
+Pretrained model weight can be downloaded from the [<a target="_blank" href="https://drive.google.com/drive/folders/1KIJ6k-cnlCbu8Rxtrln-xbG5Qta444aw?usp=share_link">Google Drive</a>].
 
 
 **The structure of dataset directory is illustrated as below:**
