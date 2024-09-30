@@ -83,33 +83,33 @@ def train_GALAXY(param):
                 loss_all.backward()
                 generator_optimiser.step()
 
-                """SCVRM Code Here."""
-                for k in range(param.M % 3):
-                    images_k = imgs_copy.clone().detach()
-                    noise = torch.rand_like(images_k)
-                    scale = torch.rand(noise.shape[0])
-                    sigma = scale * param.noise_sd
-                    sigma = sigma.unsqueeze(1).unsqueeze(2).unsqueeze(3)
-                    sigma = sigma.repeat(1, c, h, w)
-                    images_k = images_k + noise * sigma
-                    images_2 = torch.cat((images_2, images_k), dim = 0)
+                # """SCVRM Code Here."""
+                # for k in range(param.M % 3):
+                #     images_k = imgs_copy.clone().detach()
+                #     noise = torch.rand_like(images_k)
+                #     scale = torch.rand(noise.shape[0])
+                #     sigma = scale * param.noise_sd
+                #     sigma = sigma.unsqueeze(1).unsqueeze(2).unsqueeze(3)
+                #     sigma = sigma.repeat(1, c, h, w)
+                #     images_k = images_k + noise * sigma
+                #     images_2 = torch.cat((images_2, images_k), dim = 0)
 
-                    gts_k = gts_copy.clone().detach()
-                    smoothing_factor = RF.radiate(scale / param.eta)
-                    inversed_smoothing_scale = param.smooth_radiation * (1 - scale)**2
-                    smoothing_factor += inversed_smoothing_scale 
-                    gts_k = label_smoothing(gts_k, smoothing_factor)
-                    gts_2 = torch.cat((gts_2, gts_k), dim = 0)
+                #     gts_k = gts_copy.clone().detach()
+                #     smoothing_factor = RF.radiate(scale / param.eta)
+                #     inversed_smoothing_scale = param.smooth_radiation * (1 - scale)**2
+                #     smoothing_factor += inversed_smoothing_scale 
+                #     gts_k = label_smoothing(gts_k, smoothing_factor)
+                #     gts_2 = torch.cat((gts_2, gts_k), dim = 0)
             
-                images_2 = images_2.cuda()
-                gts_2 = gts_2.cuda()
+                # images_2 = images_2.cuda()
+                # gts_2 = gts_2.cuda()
 
-                pred_2 = generator(images_2)
+                # pred_2 = generator(images_2)
 
-                loss_all = F.binary_cross_entropy_with_logits(pred_2, gts_2, reduce='none')
+                # loss_all = F.binary_cross_entropy_with_logits(pred_2, gts_2, reduce='none')
 
-                loss_all.backward()
-                generator_optimiser.step()
+                # loss_all.backward()
+                # generator_optimiser.step()
 
                 loss_record.update(loss_all.data, n * (param.M % 3))
                 pbar.set_postfix(Loss='{:.4f}'.format(loss_record.show().item()),
@@ -239,8 +239,8 @@ if __name__ == '__main__':
     parser.add_argument('--test_dataset', type=str, default = 'All')
     parser.add_argument('--smooth_base', type=float, default=0.02, help='Notation S')
     parser.add_argument('--smooth_radiation', type=float, default=0.05, help='Notation RS')
-    parser.add_argument('--eta', type=float, default=5.0)
-    parser.add_argument('--M', type=int, default=4)
+    parser.add_argument('--eta', type=float, default=0.1)
+    parser.add_argument('--M', type=int, default=3)
     pm = parser.parse_args()
     print(pm)
 
