@@ -239,7 +239,7 @@ if __name__ == '__main__':
     parser.add_argument('--test_dataset', type=str, default = 'All')
     parser.add_argument('--smooth_base', type=float, default=0.02, help='Notation S')
     parser.add_argument('--smooth_radiation', type=float, default=0.05, help='Notation RS')
-    parser.add_argument('--eta', type=float, default=0.1)
+    parser.add_argument('--eta', type=float, default=1.0)
     parser.add_argument('--M', type=int, default=3)
     pm = parser.parse_args()
     print(pm)
