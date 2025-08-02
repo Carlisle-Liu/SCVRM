@@ -1,5 +1,13 @@
 <h1 align="center"> Self-Calibrating Vicinal Risk Minimisation for Model Calibration </h1>
 
+<p align="center">
+  <a href="https://scholar.google.com.au/citations?user=gqnX0nUAAAAJ&hl=en" target="_blank">Jiawei&nbsp;Liu</a> &ensp; <b>&middot;</b> &ensp;
+  <a href="https://scholar.google.com.au/citations?user=PkzMdOYAAAAJ&hl=en" target="_blank">Changkun&nbsp;Ye</a> &ensp; <b>&middot;</b> &ensp;
+  <a href="https://scholar.google.com.au/citations?user=yhscu8IAAAAJ&hl=en" target="_blank">Ruikai&nbsp;Cui</a> &ensp; <b>&middot;</b> &ensp;
+  <a href="https://scholar.google.com.au/citations?user=yMXs1WcAAAAJ&hl=en" target="_blank">Nick&nbsp;Barnes</a>&ensp; <b>&middot;</b> &ensp;
+</p>
+
+
 <sub><sub>Interim Implementation (Will Be Updated Into Final Version)</sub></sub>
 [<a href="https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Self-Calibrating_Vicinal_Risk_Minimisation_for_Model_Calibration_CVPR_2024_paper.html" target="_blank">Paper</a>] [<a href="#bibtex">BibTex</a>]
 
