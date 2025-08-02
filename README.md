@@ -1,4 +1,5 @@
-# Self-Calibrating Vicinal Risk Minimisation for Model Calibration<br>
+<h1 align="center"> Self-Calibrating Vicinal Risk Minimisation for Model Calibration </h1>
+
 <sub><sub>Interim Implementation (Will Be Updated Into Final Version)</sub></sub>
 [<a href="https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Self-Calibrating_Vicinal_Risk_Minimisation_for_Model_Calibration_CVPR_2024_paper.html" target="_blank">Paper</a>] [<a href="#bibtex">BibTex</a>]
 
