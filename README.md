@@ -4,7 +4,11 @@
   <a href="https://scholar.google.com.au/citations?user=gqnX0nUAAAAJ&hl=en" target="_blank">Jiawei&nbsp;Liu</a> &ensp; <b>&middot;</b> &ensp;
   <a href="https://scholar.google.com.au/citations?user=PkzMdOYAAAAJ&hl=en" target="_blank">Changkun&nbsp;Ye</a> &ensp; <b>&middot;</b> &ensp;
   <a href="https://scholar.google.com.au/citations?user=yhscu8IAAAAJ&hl=en" target="_blank">Ruikai&nbsp;Cui</a> &ensp; <b>&middot;</b> &ensp;
-  <a href="https://scholar.google.com.au/citations?user=yMXs1WcAAAAJ&hl=en" target="_blank">Nick&nbsp;Barnes</a>&ensp; <b>&middot;</b> &ensp;
+  <a href="https://scholar.google.com.au/citations?user=yMXs1WcAAAAJ&hl=en" target="_blank">Nick&nbsp;Barnes</a>&ensp;
+</p>
+
+<p align="center">
+  Australian National University &emsp;
 </p>
 
 
