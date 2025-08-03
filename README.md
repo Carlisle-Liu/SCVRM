@@ -18,6 +18,7 @@
 ## Overview
 This work addresses a fundamental machine/deep learning problem: ***model calibration - does the empirical class distribution conditioned on probabilistic model prediction matches the predicted distribution.*** We propose a ***Self-Calibrating Vicinal Risk Minimisation (SCVRM)*** that explores the vicinal data space where augmented data with increasing distance to the labelled data are assigned less confident labels. Experimental results demonstrate that SCVRM can significantly enhance model calibration for different dense classification tasks on both in-distribution and out-of-distribution data.
 
+# Illustration
 ![](assets/SCVRM_Intro.png)
 *An illustration of Mixup and SCVRM on a 2-D plot and example dense classification data where circles with a solid boundary denote labelled images. In Mixup, vicinal images (circles with a dashed boundary) are distributed only on the convex hull of the available data. In contrast, vicinal data in SCVRM can follow an arbitrary vicinal distribution, such as a mixture distribution in a ball as shown here. Furthermore, the vicinal label in SCVRM adopts the ground-truth label (different labels distinguished in colours) of the closest labelled image, but with label confidence (shown in colour intensity) decreased monotonically with increasing Euclidean distance between the vicinal and the labelled images. As a result, label of the vicinal image (crossed circle with olive green colour) has consistently reduced label confidence across all pixels in SCVRM, while presenting irregular patterns in Mixup.*
 
@@ -29,14 +30,14 @@ def scvrm_data(x, y, eta, zeta):
     b = x.shape[0]
     sqrt_d = math.sqrt(x[0, :, :, :].numel())
 
-    # Vicinal inputs according to Condition 1 and Equation (15).
+    # Vicinal inputs according to Equation (13).
     z = torch.rand_like(x).cuda()
     v = (torch.rand(b).cuda() * zeta + 1.0) * sqrt_d
     z_norm = z.view(b, -1).norm(p = 2, dim = 1)
     add_noise = v.view(b, 1, 1, 1) * z / z_norm.view(b, 1, 1, 1)
     x_vicinal = x.clone().detach() + add_noise
 
-    # Vicinal labels according to Condition 2 and Equation (16).
+    # Vicinal labels according to Equations (8) and (9).
     add_noise_norm = add_noise.view(b, -1).norm(p = 2, dim = 1)
     varphi = 1 - torch.exp(- (add_noise_norm / (eta * sqrt_d)).pow(2))
 
