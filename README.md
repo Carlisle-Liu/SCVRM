@@ -73,6 +73,9 @@ for batch in train_loader:
     ...
 ```
 
+### Illustration of sampled vicinal data.
+![](assets/Example_Vicinal_Images.png)
+
 ## News and Updates
 **[2024-09-09]** Initial Release with pre-trained model annd codebase.
 
