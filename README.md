@@ -18,7 +18,7 @@
 ## Overview
 This work addresses a fundamental machine/deep learning problem: ***model calibration - does the empirical class distribution conditioned on probabilistic model prediction matches the predicted distribution.*** We propose a ***Self-Calibrating Vicinal Risk Minimisation (SCVRM)*** that explores the vicinal data space where augmented data with increasing distance to the labelled data are assigned less confident labels. Experimental results demonstrate that SCVRM can significantly enhance model calibration for different dense classification tasks on both in-distribution and out-of-distribution data.
 
-![](assets/SCVRM_Intro.pdf)
+![](assets/SCVRM_Intro.png)
 
 <!-- ## News and Updates
 **[]** -->
