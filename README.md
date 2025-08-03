@@ -75,6 +75,7 @@ for batch in train_loader:
 
 ### Illustration of sampled vicinal data.
 ![](assets/Example_Vicinal_Images.png)
+*Examples of vicinal samples (2nd - 9th columns) of the labeled sample (1st column) with different L2-distances displayed underneath (unit in $\sqrt{d}$). The labels of the vicinal samples are calculated using the L2-distance conditioned label smoothing function as per Equation (8) coupled with the Gaussian function as per Equation (9), adopting the hyperparameter eta = sqrt(d).*
 
 ## News and Updates
 **[2024-09-09]** Initial Release with pre-trained model annd codebase.
