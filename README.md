@@ -18,7 +18,7 @@
 ## Overview
 This work addresses a fundamental machine/deep learning problem: ***model calibration - does the empirical class distribution conditioned on probabilistic model prediction matches the predicted distribution.*** We propose a ***Self-Calibrating Vicinal Risk Minimisation (SCVRM)*** that explores the vicinal data space where augmented data with increasing distance to the labelled data are assigned less confident labels. Experimental results demonstrate that SCVRM can significantly enhance model calibration for different dense classification tasks on both in-distribution and out-of-distribution data.
 
-# Illustration
+### Illustration
 ![](assets/SCVRM_Intro.png)
 *An illustration of Mixup and SCVRM on a 2-D plot and example dense classification data where circles with a solid boundary denote labelled images. In Mixup, vicinal images (circles with a dashed boundary) are distributed only on the convex hull of the available data. In contrast, vicinal data in SCVRM can follow an arbitrary vicinal distribution, such as a mixture distribution in a ball as shown here. Furthermore, the vicinal label in SCVRM adopts the ground-truth label (different labels distinguished in colours) of the closest labelled image, but with label confidence (shown in colour intensity) decreased monotonically with increasing Euclidean distance between the vicinal and the labelled images. As a result, label of the vicinal image (crossed circle with olive green colour) has consistently reduced label confidence across all pixels in SCVRM, while presenting irregular patterns in Mixup.*
 
