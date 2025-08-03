@@ -11,21 +11,23 @@
   Australian National University &emsp;
 </p>
 
+<p align="center">
+  <a \href="https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Self-Calibrating_Vicinal_Risk_Minimisation_for_Model_Calibration_CVPR_2024_paper.html" target="_blank">📃 Paper</a> &ensp;
+</p>
 
-<sub><sub>Interim Implementation (Will Be Updated Into Final Version)</sub></sub>
-[<a href="https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Self-Calibrating_Vicinal_Risk_Minimisation_for_Model_Calibration_CVPR_2024_paper.html" target="_blank">Paper</a>] [<a href="#bibtex">BibTex</a>]
+## Overview
+This work addresses a fundamental machine/deep learning problem: ***model calibration - does the empirical class distribution conditioned on probabilistic model prediction matches the predicted distribution.*** We propose a ***Self-Calibrating Vicinal Risk Minimisation (SCVRM)*** that explores the vicinal data space where augmented data with increasing distance to the labelled data are assigned less confident labels. Experimental results demonstrate that SCVRM can significantly enhance model calibration for different dense classification tasks on both in-distribution and out-of-distribution data.
 
+![](assets/SCVRM_Intro.pdf)
 
-**[Abstract]** *Model calibration measuring the alignment between the prediction accuracy and model confidence is an important metric reflecting model trustworthiness. Existing dense binary classification methods without proper regularisation of model confidence are prone to being over-confident. To calibrate Deep Neural Networks (DNNs) we propose a Self-Calibrating Vicinal Risk Minimisation (SCVRM) that explores the vicinity space of labeled data where vicinal images that are farther away from labeled images adopt the groundtruth label with decreasing label confidence. We prove that in the logistic regression problem SCVRM can be seen as a Vicinal Risk Minimisation plus a regularisation term that penalises the over-confident predictions. In practical implementation SCVRM is approximated using Monte Carlo sampling that samples additional augmented training images and labels from the vicinal distributions. Experimental results demonstrate that SCVRM can significantly enhance model calibration for different dense classification tasks on both in-distribution and out-of-distribution data. Code is available at https://github.com/Carlisle-Liu/SCVRM.*
+<!-- ## News and Updates
+**[]** -->
 
-
-## Environment
-
+## Environment Requirement
 - python 3.8.12
 - cuda 11.3
 - pytorch 1.11.0
 - torchvision 0.12.0
-
 
 ## Prepare the Data
 Download the training dataset: <a target="_blank" href="https://www.kaggle.com/datasets/balraj98/duts-saliency-detection-dataset">DUTS-TR</a> and the six SOD testing datasets: <a target="_blank" href="https://www.kaggle.com/datasets/balraj98/duts-saliency-detection-dataset">DUTS-TE</a> (same link as DUTS-TR), <a target="_blank" href="http://saliencydetection.net/dut-omron/">DUT-OMRON</a>, <a target="_blank" href="http://cbi.gatech.edu/salobj/">PASCAL-S</a>, <a target="_blank" href="https://www.elderlab.yorku.ca/resources/salient-objects-dataset-sod/">SOD</a>, <a target="_blank" href="https://i.cs.hku.hk/~yzyu/research/deep_saliency.html">HKU-IS</a> and <a target="_blank" href="https://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html">ECSSD</a>. The 500 Out-of-Distribution texture images are selected from the <a target="_blank" href="https://www.robots.ox.ac.uk/~vgg/data/dtd/">Describable Texture Dataset (DTD)</a>. To extract the texture image dataset, DTD_Texture_500, run the following code after placing the DTD dataset under the "Dataset" directory:
