@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a \href="https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Self-Calibrating_Vicinal_Risk_Minimisation_for_Model_Calibration_CVPR_2024_paper.html" target="_blank">📃 Paper</a> &ensp;
+  <a \href="https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Self-Calibrating_Vicinal_Risk_Minimisation_for_Model_Calibration_CVPR_2024_paper.html">📃 Paper</a> &ensp;
 </p>
 
 ## Overview
